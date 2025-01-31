@@ -74,7 +74,7 @@ static void _gaussianFilter(uint8_t* dst, uint8_t* src, int32_t stride, int32_t 
     auto iarr = 1.0f / (dimension + dimension + 1);
     auto end = w - 1;
 
-    #pragma omp parallel for
+//    #pragma omp parallel for
     for (int y = 0; y < h; ++y) {
         auto p = y * stride;
         auto i = p * 4;                 //current index
@@ -242,7 +242,7 @@ static void _dropShadowFilter(uint32_t* dst, uint32_t* src, int stride, int w, i
     auto iarr = 1.0f / (dimension + dimension + 1);
     auto end = w - 1;
 
-    #pragma omp parallel for
+//    #pragma omp parallel for
     for (int y = 0; y < h; ++y) {
         auto p = y * stride;
         auto i = p;                     //current index
