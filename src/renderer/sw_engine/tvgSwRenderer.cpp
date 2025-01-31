@@ -21,7 +21,7 @@
  */
 
 #ifdef THORVG_SW_OPENMP_SUPPORT
-    #include <omp.h>
+//    #include <omp.h>
 #endif
 #include <algorithm>
 #include "tvgMath.h"
@@ -835,7 +835,7 @@ bool SwRenderer::init(uint32_t threads)
 int32_t SwRenderer::init()
 {
 #ifdef THORVG_SW_OPENMP_SUPPORT
-    omp_set_num_threads(TaskScheduler::threads());
+//    omp_set_num_threads(TaskScheduler::threads());
 #endif
 
     return initEngineCnt;
