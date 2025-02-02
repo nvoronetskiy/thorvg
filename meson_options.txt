@@ -18,12 +18,12 @@ option('savers',
 
 option('threads',
    type: 'boolean',
-   value: true,
+   value: false,
    description: 'Enable the multi-threading task scheduler in thorvg')
 
 option('simd',
    type: 'boolean',
-   value: false,
+   value: true,
    description: 'Enable CPU Vectorization(SIMD) in thorvg')
 
 option('bindings',
